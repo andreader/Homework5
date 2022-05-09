@@ -11,18 +11,14 @@ public class Main {
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
         int[] costs = new int[30];
-        int cost = 0, minCosts = 200001, maxCosts = -1;
+        float sum = 0;
+        float average = 0;
         for (int i = 0; i < costs.length; i++) {
             costs[i] = random.nextInt(100_000) + 100_000;
-            if (costs[i] > maxCosts) {
-                maxCosts = costs[i];
-                if (costs[i] < minCosts) {
-                    minCosts = costs[i];
+            sum += costs[i];
+            average = sum / 30;
                 }
-            }
-        }
-        System.out.println("The minimum of all the costs in the month is " + minCosts + " rub. ");
-        System.out.println("The maximum of all the costs in the month is " + maxCosts + " rub");
+        System.out.println("The average of all the costs in the month is " + average + " rub. ");
             return costs;
     }
 }
