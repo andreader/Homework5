@@ -11,8 +11,8 @@ public class Main {
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
         int[] costs = new int[30];
-        float sum = 0;
-        float average = 0;
+        float sum = 0f;
+        float average = 0f;
         for (int i = 0; i < costs.length; i++) {
             costs[i] = random.nextInt(100_000) + 100_000;
             sum += costs[i];
